@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %} {% block content %}
+<div style="width: 100%; height: auto ;display:flex;align-items: center;justify-content: center;" >
+
+    <div style="display: flex;align-items: center;justify-content: center;margin-bottom: 100px"  class="col "> 
+        <div style="width: 800px;height: auto;display: flex;align-items: center;justify-content: space-between;" >
+          <img style="width: 600px; height: 400px;" src="{{post.img.url}}" class="card-img-top" alt="...">
+          <div style="border: 2px solid;width: 600px;height: 400px;display: flex;align-items: center;justify-content: space-between;flex-direction: column;"  class="card-body ">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">{{post.text}}</p>
+          </div>
+        </div> 
+      </div>
+      </div>
+ {% endblock content %}

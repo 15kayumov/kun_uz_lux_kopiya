@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kun.uz - Yangiliklar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+{% load static %}
+
+  <link rel="stylesheet" href="{%static 'css/index.css' %}">
+
+</head>
+<body>
+  <center>
+  <div style="width: 90%;"  id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="https://avatars.mds.yandex.net/get-adfox-content/2788782/241204_adfox_1749280_12865002.172e876bdfb73f6fb3339b257d61ef48.jpg/optimize.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+    </div>
+  </div>
+  </div>
+</center>
+    <center style="margin-top: 40px;">
+      <nav style="width: 90%; flex-wrap: wrap;" class="navbar navbar-expand-lg bg-body navbar-dark py-3  shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="container ">
+          <a class="navbar-brand fw-bold" href="#"><img src="https://kun.uz/assets/d1394a23/img/icons/logo-light.svg" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active text-dark" href="{%url 'home'%}">Узбекистан </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="{%url 'mir'%}">Мир</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Общество</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Спорт</a>
+              </li>
+              <li class="nav-item" style="margin-left: 400px">
+                  <div class="d-flex align-items-center">
+                      <i class="bi bi-globe me-2">
+                      <select style="border: none; background-color: whitesmoke;border-radius: 8%;" class="form-select w-auto" aria-label="Til tanlash menyusi">
+                          <option selected>Русский</option>
+                          <option value="uzbekcha">Ўзбекча</option>
+                          <option value="ozbekcha">O'zbekcha</option>
+                          <option value="english">English</option>
+                      </select>
+                    </i>
+              </div>
+          
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+     
+  
+    </center>
+  
+
+  {% block content %}
+  {% endblock content %}
+</body>
+</html>

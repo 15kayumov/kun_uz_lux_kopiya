@@ -1,0 +1,32 @@
+navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-link {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ffdd57;
+  }
+  
+  .btn {
+    font-weight: 600;
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+  }
+  .hover-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .hover-text:hover {
+    color: #007bff; /* Hover holatda rangni o'zgartirish */
+  }

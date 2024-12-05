@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% block content %}
+ <style>
+  body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f9f9f9;
+}
+.grandfather{
+  width: 1400px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.father{
+  width: 1350px;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.mot{
+  width:550px  ;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 30px;
+
+}
+.rasm{
+  width: 550px;
+  height: 300px;
+  margin-top: 30px;
+}
+.sistes{
+  margin-left: 50px;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+
+ </style>
+{%for mir in object_list%}
+<center>      
+<div   class="grandfather">
+<div class="father">
+  <div  class="mot">
+    <h3  > <a class="hover-text d-flex align-items-start p-2 "  style="text-decoration: none;color: black;" href="{% url 'mir_detail' mir.pk %}">{{mir.title}}</a></h3>
+    <p> <a style="text-decoration: none;color: black;" href="{% url 'mir_detail' mir.pk %}">{{mir.text}}</a></p>
+  </div>
+  <a href="{% url 'mir_detail' mir.pk %}"><img  class="rasm"  src="{{mir.img.url}}" alt="" /></a>
+    
+  <div   class="sistes">
+    <h3 > <a style="text-decoration: none;color: black;" href="{% url 'mir2_detail' mir.pk %}">{{mir.title2}}</a></h3>
+    <p> <a style="text-decoration: none;color: black;" href="{% url 'mir2_detail' mir.pk %}">{{mir.text2}}</a></p>
+  </div>
+</div>
+</div>
+</center>
+{%endfor%}
+ {% endblock content %}
