@@ -23,7 +23,21 @@ class Mir(models.Model):
 
 
     def str(self):
-        return self.titl
+        return self.title
     
     def get_absolute_url(self):
         return reverse('mir_detail',args=[str(self.pk)])
+    
+class Obshestvo(models.Model):
+    title = models.CharField(max_length=200)
+    img = models.ImageField(blank=True)
+    text = models.TextField( )
+    title2=models.CharField(max_length=200)
+    text2 = models.TextField()
+
+
+    def str(self):
+        return self.title
+    
+    def get_absolute_url(self):
+        return reverse('obshestvo_detail',args=[str(self.pk)])

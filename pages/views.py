@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView,DetailView
-from .models import Post,Mir
+from .models import Post,Mir,Obshestvo
 
 class HomeListViev(ListView):
     model=Post
@@ -21,3 +21,15 @@ class Mir_detail(DetailView):
 class Mir2_detail(DetailView):
     model=Mir
     template_name='mir2_detail.html'
+
+
+    
+class ObshestvoListViev(ListView):
+    model=Obshestvo
+    template_name='obshestvo.html'    
+class Obshestvo_detail(DetailView):
+    model=Obshestvo
+    template_name='obshestvo_detail.html'
+class Obshestvo2_detail(DetailView):
+    model=Obshestvo
+    template_name='obshestvo2_detail.html'

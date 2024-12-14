@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %} {% block content %}
+<div style="width: 100%; height: auto ;display:flex;align-items: center;justify-content: center;" >
+
+    <div style="display: flex;align-items: center;justify-content: center;margin-bottom: 100px"  class="col "> 
+        <div style="width: 800px;height: auto;display: flex;align-items: center;justify-content: space-between;" >
+          <img style="width: 600px; height: 400px;" src="{{obshestvo.img.url}}" class="card-img-top" alt="...">
+        </div> 
+        <div style="border: 2px solid;width: 900px;height: 400px;display: flex;align-items: center;justify-content: space-between;flex-direction: column;padding: 10px;box-sizing: border-box;overflow: hidden;max-width: 100%;word-wrap: break-word;"  class="card-body ">
+            <h5 class="card-title">{{obshestvo.title}}</h5>
+            <p class="card-text">{{obshestvo.text}}</p>
+          </div>
+        </div> 
+      </div>
+      </div>
+ {% endblock content %}
